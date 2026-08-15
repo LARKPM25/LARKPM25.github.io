@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estimate vs signed contract — side by side</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500..700;1,6..72,500..700&family=Public+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --desk:#d8d2c6; --jade:#0b5c4d; --bar:#084438; --line:#bfd4cc; --row:#f4f9f7; --ink:#1a1a1a; --muted:#556; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; background:#f4f1ea; color:var(--ink); font-family:'Public Sans','Segoe UI',Helvetica,Arial,sans-serif; }
+    .chrome { position:sticky; top:0; z-index:5; background:#fff; border-bottom:1px solid #ddd4c6; padding:12px 20px; }
+    .chrome h1 { font-family:Newsreader,Georgia,serif; font-size:20px; margin:0; }
+    .chrome p { margin:4px 0 0; color:var(--muted); font-size:13px; }
+    .compare { display:grid; grid-template-columns:1fr 1fr; gap:20px; padding:20px; align-items:start; }
+    @media (max-width:1100px) { .compare { grid-template-columns:1fr; } }
+    .col-label { font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--jade); margin:0 0 8px 8px; }
+    .desk { background:var(--desk); padding:20px 12px 32px; }
+    .paper { max-width:8.5in; margin:0 auto; background:#fff; padding:22px 28px 28px; box-shadow:0 8px 28px rgba(42,36,28,0.18); font-size:10pt; line-height:1.4; }
+    .head { display:flex; justify-content:space-between; border-bottom:1.5px solid var(--jade); padding-bottom:5px; margin-bottom:14px; font-size:8pt; color:#555; }
+    .doc-title { letter-spacing:0.14em; font-weight:600; }
+    .wordmark { font-family:Newsreader,Georgia,serif; font-weight:700; color:var(--jade); font-size:9.5pt; }
+    .sec { margin:0 0 12px; border:1px solid var(--line); }
+    .band { background:var(--jade); color:#fff; padding:4px 10px; display:flex; gap:8px; align-items:center; }
+    .no { font-family:Newsreader,Georgia,serif; font-weight:700; background:rgba(255,255,255,.18); padding:0 7px; }
+    .title { font-family:Newsreader,Georgia,serif; font-weight:600; letter-spacing:1px; }
+    .body { padding:8px 10px 10px; }
+    .preamble { font-family:Newsreader,Georgia,serif; font-style:italic; margin:0 0 10px; color:#334; }
+    table { width:100%; border-collapse:collapse; margin:0 0 8px; font-size:9pt; border:1px solid #cfe0da; }
+    td, th { padding:3px 8px; vertical-align:top; }
+    .bar-h td, .stmt-h td, th { background:var(--bar); color:#fff; font-weight:600; text-align:left; }
+    .lbl { width:34%; color:#445; }
+    tr:nth-child(even) td { background:var(--row); }
+    .bar-h + tr td, .stmt-h + tr td, .bar-h td, .stmt-h td, th { background:var(--bar); }
+    tr:nth-child(even) .bar-h td { background:var(--bar); }
+    .two { display:flex; gap:10px; }
+    .two > table { flex:1; }
+    .sub { font-size:9.5pt; font-weight:700; letter-spacing:.7px; text-transform:uppercase; color:var(--jade); margin:8px 0 4px; }
+    .scope-h { font-family:Newsreader,Georgia,serif; font-size:11pt; color:var(--jade); margin:8px 0 4px; }
+    .invest { border:1px solid #cfe0da; }
+    .row { display:flex; justify-content:space-between; padding:3px 8px; }
+    .row:nth-child(even) { background:var(--row); }
+    .grand { background:var(--bar); color:#fff; font-weight:700; padding:5px 8px; }
+    .right { text-align:right; }
+    .toggle { width:100%; border:0; background:var(--jade); color:#fff; text-align:left; cursor:pointer; }
+    .muted { color:#667; font-size:9pt; }
+    .sig-cols { display:flex; gap:12px; }
+    .sig-panel { flex:1; border:1px solid var(--line); }
+    .sig-h { background:var(--bar); color:#fff; font-size:9pt; font-weight:700; letter-spacing:.7px; text-transform:uppercase; padding:3px 8px; }
+    .sig-b { padding:10px 8px 8px; min-height:88px; }
+    .ink { font-family:'Segoe Script','Bradley Hand',cursive; font-size:22px; color:#163; }
+    .caps { display:flex; justify-content:space-between; font-size:7.5pt; text-transform:uppercase; letter-spacing:.4px; color:#667; margin-top:2px; }
+    .line { border-bottom:1px solid #94a8a0; min-height:28px; }
+    .foot { border-top:1px solid #94a8a0; margin-top:16px; padding-top:6px; color:#667; font-size:8pt; text-align:center; }
+    .note { font-size:12px; color:var(--muted); padding:0 20px 24px; max-width:1100px; }
+  </style>
+</head>
+<body>
+  <header class="chrome">
+    <div>
+      <h1>Estimate Preview vs signed contract</h1>
+      <p>Same Two-Tone Blocks paper. Left is the estimate. Right is the executed contract after client + countersign. Not deployed.</p>
+    </div>
+  </header>
+  <div class="compare">
+    <section>
+      <p class="col-label">Estimate · Preview</p>
+      <div class="desk"><article class="paper">
+        <header class="head"><span class="doc-title">PROJECT ESTIMATE</span><span class="wordmark">Deck Creations</span></header>
+        <div class="sec"><div class="band"><span class="no">I</span><span class="title">OVERVIEW</span></div><div class="body">
+          <p class="preamble">This Construction Contract is entered into by Deck Creations (“Contractor”) and Maria Gonzalez (“Client”) for the work described below at the Premises. The estimate, once signed by both parties, becomes the contract of record.</p>
+          <table><tr class="bar-h"><td colspan="2">Contract Details</td></tr><tr><td class="lbl">Project</td><td>Gonzalez Deck</td></tr><tr><td class="lbl">Document Prepared</td><td>8/15/2026</td></tr><tr><td class="lbl">Design Consultant</td><td>Owner Test</td></tr></table>
+          <div class="two">
+            <table><tr class="bar-h"><td colspan="2">Deck Creations Details (Contractor)</td></tr><tr><td class="lbl">Name</td><td>Deck Creations</td></tr><tr><td class="lbl">Phone</td><td>(555) 010-2000</td></tr><tr><td class="lbl">Address</td><td>100 Harbor Ave, Annapolis, MD</td></tr></table>
+            <table><tr class="bar-h"><td colspan="2">Client Information</td></tr><tr><td class="lbl">Name</td><td>Maria Gonzalez</td></tr><tr><td class="lbl">Email</td><td>eric@deckcreations.com</td></tr><tr><td class="lbl">Premises</td><td>14 Maple Lane, Annapolis, MD</td></tr></table>
+          </div>
+        </div></div>
+        <div class="sec"><div class="band"><span class="no">II</span><span class="title">PROJECT SUMMARY</span></div><div class="body">
+          <table><tr class="bar-h"><td colspan="2">Project Details</td></tr><tr><td class="lbl">Project</td><td>Gonzalez Deck</td></tr><tr><td class="lbl">Jobsite</td><td>14 Maple Lane, Annapolis, MD</td></tr><tr><td class="lbl">Overview</td><td>Preconfigured composite deck with stairs and railing.</td></tr><tr><td class="lbl">Dumpster</td><td>Driveway</td></tr><tr><td class="lbl">Starts in</td><td>3 week(s)</td></tr><tr><td class="lbl">Completes in</td><td>6 week(s)</td></tr></table>
+        </div></div>
+        <div class="sec"><div class="band"><span class="no">III</span><span class="title">PROJECT SCOPE</span></div><div class="body">
+          <h3 class="scope-h">Preconfigured Deck — Main deck</h3>
+          <table><tr class="stmt-h"><td colspan="2">Decking</td></tr><tr><td class="lbl">Decking Selection</td><td>TimberTech Terrain+</td></tr><tr><td class="lbl">Color</td><td>Brown Oak</td></tr><tr class="stmt-h"><td colspan="2">Railing</td></tr><tr><td class="lbl">Railing Selection</td><td>Composite rail</td></tr><tr><td class="lbl">Baluster</td><td>Aluminum black</td></tr></table>
+          <p class="muted">No quantity, unit, or price columns. Money lives in Section VI only.</p>
+        </div></div>
+        <div class="sec"><div class="band"><span class="no">IV</span><span class="title">CONTRACT TERMS</span></div><div class="body"><p class="muted">Full legal text on the estimate paper (always open on Preview).</p></div></div>
+        <div class="sec"><div class="band"><span class="no">V</span><span class="title">LIMITED LIABILITY WARRANTY</span></div><div class="body"><p class="muted">Warranty language from Settings → Contract templates.</p></div></div>
+        <div class="sec"><div class="band"><span class="no">VI</span><span class="title">INVESTMENT SUMMARY</span></div><div class="body">
+          <div class="invest"><div class="row"><span>Administration</span><span>$850.00</span></div><div class="row"><span>Preconfigured Deck — Main deck</span><span>$18,400.00</span></div><div class="row grand"><span>Grand Total</span><span>$19,250.00</span></div></div>
+          <p class="sub">Payment schedule</p>
+          <table><tr><th>Payment</th><th>Milestone</th><th class="right">Share</th><th class="right">Amount</th></tr><tr><td>Down Payment</td><td>Due at signing</td><td class="right">20%</td><td class="right">$3,850.00</td></tr><tr><td>Start Payment</td><td>Due at Start of Project</td><td class="right">47%</td><td class="right">$9,047.50</td></tr><tr><td>Progress Payment</td><td>Due at Framing Inspection</td><td class="right">23%</td><td class="right">$4,427.50</td></tr><tr><td>Final Payment</td><td>Due at Final Inspection</td><td class="right">10%</td><td class="right">$1,925.00</td></tr></table>
+          <p class="sub">Allowances</p>
+          <table><tr><th>Type</th><th>Description</th><th class="right">Amount</th></tr><tr><td>Lighting</td><td>Fixture allowance</td><td class="right">$750.00</td></tr></table>
+        </div></div>
+        <div class="sec"><div class="band"><span class="no">VII</span><span class="title">SIGNATURE SUMMARY</span></div><div class="body">
+          <p class="preamble">By signing, both parties agree this estimate becomes the construction contract.</p>
+          <div class="sig-cols">
+            <div class="sig-panel"><div class="sig-h">Client / Homeowner</div><div class="sig-b"><div class="line"></div><div class="caps"><span>Signature</span><span>Date</span></div></div></div>
+            <div class="sig-panel"><div class="sig-h">Contractor</div><div class="sig-b"><div class="line"></div><div class="caps"><span>Signature</span><span>Date</span></div></div></div>
+          </div>
+        </div></div>
+        <footer class="foot">Deck Creations · Gonzalez Deck · Estimate</footer>
+      </article></div>
+    </section>
+    <section>
+      <p class="col-label">Signed contract · View</p>
+      <div class="desk"><article class="paper">
+        <header class="head"><span class="doc-title">CONSTRUCTION CONTRACT</span><span class="wordmark">Deck Creations</span></header>
+        <div class="sec"><div class="band"><span class="no">I</span><span class="title">OVERVIEW</span></div><div class="body">
+          <p class="preamble">This Construction Contract is entered into by Deck Creations (“Contractor”) and Maria Gonzalez (“Client”) for the work described below at the Premises. The estimate, once signed by both parties, becomes the contract of record.</p>
+          <table><tr class="bar-h"><td colspan="2">Contract Details</td></tr><tr><td class="lbl">Contract ID</td><td>CRT-1042</td></tr><tr><td class="lbl">Document</td><td>Gonzalez Deck</td></tr><tr><td class="lbl">Status</td><td>EXECUTED</td></tr></table>
+          <div class="two">
+            <table><tr class="bar-h"><td colspan="2">Deck Creations Details (Contractor)</td></tr><tr><td class="lbl">Name</td><td>Deck Creations</td></tr><tr><td class="lbl">Phone</td><td>(555) 010-2000</td></tr><tr><td class="lbl">Address</td><td>100 Harbor Ave, Annapolis, MD</td></tr></table>
+            <table><tr class="bar-h"><td colspan="2">Client Information</td></tr><tr><td class="lbl">Name</td><td>Maria Gonzalez</td></tr><tr><td class="lbl">Email</td><td>eric@deckcreations.com</td></tr><tr><td class="lbl">Address</td><td>14 Maple Lane, Annapolis, MD</td></tr></table>
+          </div>
+        </div></div>
+        <div class="sec"><div class="band"><span class="no">II</span><span class="title">PROJECT SUMMARY</span></div><div class="body">
+          <table><tr class="bar-h"><td colspan="2">Project Details</td></tr><tr><td class="lbl">Project</td><td>Gonzalez Deck</td></tr><tr><td class="lbl">Jobsite</td><td>14 Maple Lane, Annapolis, MD</td></tr><tr><td class="lbl">Overview</td><td>Preconfigured composite deck with stairs and railing.</td></tr><tr><td class="lbl">Dumpster</td><td>Driveway</td></tr><tr><td class="lbl">Starts in</td><td>3 week(s)</td></tr><tr><td class="lbl">Completes in</td><td>6 week(s)</td></tr></table>
+        </div></div>
+        <div class="sec"><div class="band"><span class="no">III</span><span class="title">PROJECT SCOPE</span></div><div class="body">
+          <h3 class="scope-h">Preconfigured Deck — Main deck</h3>
+          <table><tr class="stmt-h"><td colspan="2">Decking</td></tr><tr><td class="lbl">Decking Selection</td><td>TimberTech Terrain+</td></tr><tr><td class="lbl">Color</td><td>Brown Oak</td></tr><tr class="stmt-h"><td colspan="2">Railing</td></tr><tr><td class="lbl">Railing Selection</td><td>Composite rail</td></tr><tr><td class="lbl">Baluster</td><td>Aluminum black</td></tr></table>
+        </div></div>
+        <div class="sec"><button class="band toggle" type="button"><span class="no">IV</span><span class="title">CONTRACT TERMS</span></button></div>
+        <div class="sec"><button class="band toggle" type="button"><span class="no">V</span><span class="title">LIMITED LIABILITY WARRANTY</span></button></div>
+        <div class="sec"><div class="band"><span class="no">VI</span><span class="title">INVESTMENT SUMMARY</span></div><div class="body">
+          <div class="invest"><div class="row"><span>Administration</span><span>$850.00</span></div><div class="row"><span>Preconfigured Deck — Main deck</span><span>$18,400.00</span></div><div class="row grand"><span>Grand Total</span><span>$19,250.00</span></div></div>
+          <p class="sub">Payment schedule</p>
+          <table><tr><th>Payment</th><th>Milestone</th><th class="right">Share</th><th class="right">Amount</th></tr><tr><td>Down Payment</td><td>Due at signing</td><td class="right">20%</td><td class="right">$3,850.00</td></tr><tr><td>Start Payment</td><td>Due at Start of Project</td><td class="right">47%</td><td class="right">$9,047.50</td></tr><tr><td>Progress Payment</td><td>Due at Framing Inspection</td><td class="right">23%</td><td class="right">$4,427.50</td></tr><tr><td>Final Payment</td><td>Due at Final Inspection</td><td class="right">10%</td><td class="right">$1,925.00</td></tr></table>
+          <p class="sub">Allowances</p>
+          <table><tr><th>Type</th><th>Description</th><th class="right">Amount</th></tr><tr><td>Lighting</td><td>Fixture allowance</td><td class="right">$750.00</td></tr></table>
+        </div></div>
+        <div class="sec"><div class="band"><span class="no">VII</span><span class="title">SIGNATURE SUMMARY</span></div><div class="body">
+          <p class="preamble">By signing, both parties agree this estimate becomes the construction contract. Sign with finger or stylus only.</p>
+          <div class="sig-cols">
+            <div class="sig-panel"><div class="sig-h">Client / Homeowner</div><div class="sig-b"><div class="ink">Maria Gonzalez</div><div class="caps"><span>Signature</span><span>Aug 15, 2026</span></div><p class="muted">Maria Gonzalez</p></div></div>
+            <div class="sig-panel"><div class="sig-h">Contractor</div><div class="sig-b"><div class="ink">Owner Test</div><div class="caps"><span>Signature</span><span>Aug 15, 2026</span></div><p class="muted">For Deck Creations — Design Consultant</p></div></div>
+          </div>
+        </div></div>
+        <footer class="foot">Deck Creations · CRT-1042 · EXECUTED</footer>
+      </article></div>
+    </section>
+  </div>
+  <p class="note">Review this pair and tell us what is still missing. The live app is not deployed. Contract View now uses this paper: preamble, project details, statement-style scope (no qty/unit), investment + payment schedule + allowances, signature clauses, finger/stylus pad only.</p>
+</body>
+</html>
