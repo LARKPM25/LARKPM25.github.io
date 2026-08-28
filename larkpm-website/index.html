@@ -4,13 +4,357 @@
 <meta charset="utf-8" />
 <title>LarkPM — Make every builder more successful</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="LarkPM marketing site mockup — Sprint 69." />
+<meta name="description" content="LarkPM is the system for running a home-services company — from the first website lead to the signed contract and the job on the ground." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>@import url('https://larkpm25.github.io/larkpm-website/site.css');</style>
+<link rel="stylesheet" href="_shared.css" />
 </head>
 <body>
-<p>placeholder</p>
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="#home"><span class="logo-mark"></span> LARKPM</a>
+    <nav class="nav-links">
+      <a class="on" href="#home">Home</a>
+      <a href="#product">Product</a>
+      <a href="#story">Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="https://app.larkpm.com/login">Log in</a>
+      <a class="btn btn-primary" href="#contact">Request a conversation</a>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="kicker">For home-services contractors</p>
+        <h1>Make every builder more successful.</h1>
+        <p class="lede">LarkPM is the system for running the company — website lead to signed contract to the job on the ground. One record. No second set of books after the sale.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#contact">Request a conversation</a>
+          <a class="btn btn-ghost btn-lg" href="#product">See the path</a>
+        </div>
+        <p class="hero-note">Already on LarkPM? <a href="https://app.larkpm.com/login" style="color:var(--primary);font-weight:600">Log in to the app</a></p>
+      </div>
+
+      <div class="app-window" aria-hidden="true">
+        <div class="app-chrome">
+          <span class="dot" style="background:#C25B54"></span>
+          <span class="dot" style="background:#D9A559"></span>
+          <span class="dot" style="background:#4CBB85"></span>
+          <div class="app-url">app.larkpm.com/projects/henderson-deck</div>
+        </div>
+        <div class="app-body">
+          <aside class="app-side">
+            <p class="brand">LARKPM</p>
+            <a>Dashboard</a>
+            <a>Leads</a>
+            <a>Clients</a>
+            <a class="on">Projects</a>
+            <a>Partners</a>
+          </aside>
+          <div class="app-main">
+            <p class="app-crumb">Projects</p>
+            <h3>Henderson Deck</h3>
+            <p class="app-meta">1842 Ridge Rd · Greenville County · PM Dana Reyes · <span class="chip">Sold</span></p>
+            <div class="tabs">
+              <span class="on">Overview</span>
+              <span>Budget</span>
+              <span>Receivables</span>
+              <span>Approvals</span>
+              <span>Dates</span>
+              <span>Tasks</span>
+            </div>
+            <div class="tiles">
+              <div class="tile"><div class="lbl">Contract</div><div class="val">$48,260</div><div class="sub">Signed Aug 12</div></div>
+              <div class="tile"><div class="lbl">Permit</div><div class="val">In review</div><div class="sub">County typical 11 days</div></div>
+              <div class="tile"><div class="lbl">Next</div><div class="val">Footings</div><div class="sub">Crew Mon 8am</div></div>
+            </div>
+            <div class="rows">
+              <div class="row"><span>Item</span><span>Qty</span><span>Total</span></div>
+              <div class="row"><span>Composite decking · picture frame</span><span>312 sf</span><span>$9,840</span></div>
+              <div class="row"><span>Hidden fastener package</span><span>1</span><span>$410</span></div>
+              <div class="row"><span>Railing · Reliance · 42 lf</span><span>42</span><span>$3,276</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="wrap">
+      <div class="proof-bar">
+        <span><b>One system</b> for the office and the job</span>
+        <span><b>Catalog pricing</b> on the estimate — not a ghost spreadsheet</span>
+        <span><b>Sign in the product</b> · no extra tab to babysit</span>
+        <span><b>Production</b> on the same record you sold</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">The path</p>
+      <h2>From first hello to a finished job.</h2>
+      <p class="intro">That sequence is the product. Website lead becomes a client. Intake becomes an estimate. The estimate becomes a contract. The signed job becomes production.</p>
+      <div class="path">
+        <div class="step"><div class="n">01</div><h3>Lead</h3><p>The website is a source. Forms land in LarkPM attributed — not copy-pasted.</p></div>
+        <div class="step"><div class="n">02</div><h3>Client</h3><p>A person and their jobs, together. The team who can see them lives on that record.</p></div>
+        <div class="step"><div class="n">03</div><h3>Intake</h3><p>Walk the job. Scope first. Accepting it prices from the catalog and the engines.</p></div>
+        <div class="step"><div class="n">04</div><h3>Estimate</h3><p>The real bill of materials. Estimators work the job — not a second spreadsheet.</p></div>
+        <div class="step"><div class="n">05</div><h3>Contract</h3><p>What you scoped is what they sign. Dual-party e-sign in the product.</p></div>
+        <div class="step"><div class="n">06</div><h3>Build</h3><p>Approvals, dates, photos, tasks, receivables — same project the office sold.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff; border-top:1px solid var(--border); border-bottom:1px solid var(--border)">
+    <div class="wrap">
+      <div class="feature">
+        <div>
+          <p class="kicker">Sell</p>
+          <h3>Stop rebuilding the job in three places.</h3>
+          <p>Leads, intake, catalog, and the estimate are one walk. When the website sends a person in, they are already a lead. When intake is accepted, the materials are not a surprise.</p>
+          <ul>
+            <li>Website forms post into the CRM</li>
+            <li>Intake scopes the job the crew will actually build</li>
+            <li>Estimate prices from the catalog — not a placeholder line</li>
+          </ul>
+        </div>
+        <div class="app-window flat-window" aria-hidden="true">
+          <div class="app-chrome">
+            <span class="dot" style="background:#C25B54"></span>
+            <span class="dot" style="background:#D9A559"></span>
+            <span class="dot" style="background:#4CBB85"></span>
+            <div class="app-url">app.larkpm.com/leads</div>
+          </div>
+          <div class="app-main">
+            <h3 style="font-size:18px">Leads</h3>
+            <p class="app-meta">Website form · last 7 days</p>
+            <div class="rows">
+              <div class="row"><span>Name</span><span>Source</span><span>Status</span></div>
+              <div class="row"><span>Maya Chen</span><span>Website form</span><span class="chip">New</span></div>
+              <div class="row"><span>Rob Alvarez</span><span>Website form</span><span class="chip">Contacted</span></div>
+              <div class="row"><span>Ellis Hart</span><span>Referral</span><span class="chip">Qualified</span></div>
+              <div class="row"><span>Priya Shah</span><span>Website form</span><span class="chip">New</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature reverse">
+        <div>
+          <p class="kicker">Sign</p>
+          <h3>The contract is the estimate, made official.</h3>
+          <p>No export to a signing tool that does not know the job. Dual-party e-sign lives in LarkPM. When it executes, the work files itself.</p>
+          <ul>
+            <li>Scope statements match the intake</li>
+            <li>Both parties sign in the product</li>
+            <li>Executed copy lands on the client record</li>
+          </ul>
+        </div>
+        <div class="app-window flat-window" aria-hidden="true">
+          <div class="app-chrome">
+            <span class="dot" style="background:#C25B54"></span>
+            <span class="dot" style="background:#D9A559"></span>
+            <span class="dot" style="background:#4CBB85"></span>
+            <div class="app-url">app.larkpm.com/contracts/henderson</div>
+          </div>
+          <div class="app-main">
+            <p class="app-meta">Contract · Henderson Deck</p>
+            <h3 style="font-size:20px">Ready for signatures</h3>
+            <div class="tiles" style="margin-top:14px">
+              <div class="tile"><div class="lbl">Company</div><div class="val" style="font-size:16px">Signed</div><div class="sub">Eric F. · Aug 12</div></div>
+              <div class="tile"><div class="lbl">Client</div><div class="val" style="font-size:16px">Signed</div><div class="sub">J. Henderson · Aug 12</div></div>
+              <div class="tile"><div class="lbl">Status</div><div class="val" style="font-size:16px">Executed</div><div class="sub">Filed to documents</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div>
+          <p class="kicker">Build</p>
+          <h3>Production does not start from a copy.</h3>
+          <p>Approvals, dates, photos, tasks, and receivables sit on the project you already sold. The field and the office are looking at the same job.</p>
+          <ul>
+            <li>Permit and inspection on the Dates tab</li>
+            <li>Photos and documents with the job, not a drive</li>
+            <li>Receivables from the signed contract — not a new spreadsheet</li>
+          </ul>
+        </div>
+        <div class="app-window flat-window" aria-hidden="true">
+          <div class="app-chrome">
+            <span class="dot" style="background:#C25B54"></span>
+            <span class="dot" style="background:#D9A559"></span>
+            <span class="dot" style="background:#4CBB85"></span>
+            <div class="app-url">app.larkpm.com/projects/henderson-deck</div>
+          </div>
+          <div class="app-main">
+            <div class="tabs">
+              <span>Overview</span>
+              <span>Budget</span>
+              <span class="on">Dates</span>
+              <span>Photos</span>
+              <span>Tasks</span>
+            </div>
+            <div class="rows">
+              <div class="row"><span>Milestone</span><span>Plan</span><span>Status</span></div>
+              <div class="row"><span>Permit submitted</span><span>Aug 14</span><span class="chip">Done</span></div>
+              <div class="row"><span>Permit issued</span><span>—</span><span>Waiting</span></div>
+              <div class="row"><span>Footings</span><span>Aug 25</span><span>Scheduled</span></div>
+              <div class="row"><span>Final</span><span>—</span><span>Open</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="kicker">On the board</p>
+      <h2>The week, as the owner sees it.</h2>
+      <p class="intro">Not a dashboard of vanity charts. The jobs that are sold, waiting, and on the ground.</p>
+      <div class="jobs">
+        <article class="job">
+          <p class="who">Henderson · Greenville</p>
+          <h3>Composite deck + railing</h3>
+          <p>Permit in review. Crew on footings Monday. Same contract they signed last week.</p>
+          <div class="amt">$48,260 · Sold</div>
+        </article>
+        <article class="job">
+          <p class="who">Patel · Travelers Rest</p>
+          <h3>Screened porch</h3>
+          <p>Estimate out. Waiting on board selection. Intake already priced the structure.</p>
+          <div class="amt">$31,900 · Estimate</div>
+        </article>
+        <article class="job">
+          <p class="who">Website form · yesterday</p>
+          <h3>Maya Chen · new lead</h3>
+          <p>Came in from the marketing site. Not typed in. Ready for the first call.</p>
+          <div class="amt">New · Website form</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section espresso" id="story">
+    <div class="wrap split">
+      <div>
+        <p class="kicker">Our story</p>
+        <p class="quote">The employees needed better tools. The company needed one system.</p>
+        <p class="quote-attr">Eric Fragoso · Founder · owner of a small construction company</p>
+      </div>
+      <div>
+        <h2>Built because the tools were in the way.</h2>
+        <p>LarkPM was founded by an owner who watched his people work around the software. Spreadsheets after the sale. A signing tab that did not know the job. Status chased by text.</p>
+        <p>The product is the system he wished he had handed them. The public site is the front door. The application is the shop.</p>
+        <p style="margin-top:22px"><a class="btn btn-light" href="#contact">Let’s chat</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="product" style="background:#fff; border-top:1px solid var(--border)">
+    <div class="wrap">
+      <p class="kicker">Product</p>
+      <h2>The path is the product.</h2>
+      <p class="intro">Lead. Client. Intake. Estimate. Contract. Production. LarkPM is that walk — not a pile of tools taped together after the fact.</p>
+      <div class="detail">
+        <div class="num">01</div>
+        <div>
+          <h3>Leads arrive as leads</h3>
+          <p>A form on a company website posts into LarkPM. Source, page, and contact stay on the record. Nobody retypes a name from an email.</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="num">02</div>
+        <div>
+          <h3>Clients own the jobs</h3>
+          <p>A lead becomes a client. The client owns the projects. Interactions, documents, and who on the team can see them live there.</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="num">03</div>
+        <div>
+          <h3>Intake scopes the real job</h3>
+          <p>Walk the work: deck, porch, railing, stairs. Accepting intake prices from the catalog and the calc engines.</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="num">04</div>
+        <div>
+          <h3>The estimate is a bill of materials</h3>
+          <p>Estimators bind catalog items and set quantities. Purpose-first lines. No “materials TBD” pretending to be a price.</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="num">05</div>
+        <div>
+          <h3>Sign in the product</h3>
+          <p>Dual-party e-sign. What they sign is what you scoped. Executed work files to the client documents.</p>
+        </div>
+      </div>
+      <div class="detail">
+        <div class="num">06</div>
+        <div>
+          <h3>Build on the same record</h3>
+          <p>Overview, budget, receivables, approvals, dates, photos, tasks. The field and the office share one truth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap split">
+      <div>
+        <p class="kicker">Let’s chat</p>
+        <h2>We’re excited to work with you.</h2>
+        <p class="intro">Tell us who you are. We will follow up. If you already have LarkPM, log in — this form is a first conversation, not a support ticket.</p>
+        <p class="hero-note">Existing account? <a href="https://app.larkpm.com/login" style="color:var(--primary);font-weight:600">Log in to the app</a></p>
+      </div>
+      <form class="form-card form" action="#" method="post" onsubmit="event.preventDefault(); this.querySelector('[data-note]').hidden = false;">
+        <label>Name <input type="text" name="name" required /></label>
+        <label>Company <input type="text" name="company" /></label>
+        <label>Email <input type="email" name="email" required /></label>
+        <label>Phone <input type="tel" name="phone" /></label>
+        <label>What should we know?
+          <textarea name="message" placeholder="Trade, crew size, what you want LarkPM to take off your plate…"></textarea>
+        </label>
+        <button class="btn btn-primary btn-lg" type="submit">Send</button>
+        <p class="fine" data-note hidden>Preview only — the live WordPress form will post into LarkPM as a website lead.</p>
+        <p class="fine">Privacy: <a href="https://app.larkpm.com/privacy">app.larkpm.com/privacy</a></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>© LarkPM · Make every builder more successful</div>
+    <div style="display:flex;gap:18px">
+      <a href="#product">Product</a>
+      <a href="#story">Story</a>
+      <a href="#contact">Contact</a>
+      <a href="https://app.larkpm.com/privacy">Privacy</a>
+      <a href="https://app.larkpm.com/terms">Terms</a>
+      <a href="https://app.larkpm.com/login">Log in</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const links = document.querySelectorAll('.nav-links a');
+  function mark() {
+    const id = (location.hash || '#home').slice(1);
+    links.forEach((a) => a.classList.toggle('on', a.getAttribute('href') === '#' + id));
+  }
+  window.addEventListener('hashchange', mark);
+  mark();
+</script>
 </body>
 </html>
